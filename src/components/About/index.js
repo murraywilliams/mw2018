@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   padding-left: 10%;
   padding-right: 10%;
   color: #272727;
-  margin-top: 40px;
+  margin-top: 80px;
 `
 const Heading = styled.h2`
   font-size: 40px;

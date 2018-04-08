@@ -117,6 +117,7 @@ const ContactButton = styled.div`
   }
 
   &:hover {
+    border: 4px solid #FFC70B;
     background: #FFC70B;
   }
 
@@ -146,7 +147,7 @@ const SkillTitle = styled.h5`
     content: " ";
     padding-top: 10px;
     border-bottom: 4px solid #FFC70B;
-    width: 6%;
+    width: 10%;
     height: 6px;
     display: block;
   }

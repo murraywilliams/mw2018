@@ -138,6 +138,7 @@ const RHS = styled.div`
   }
   li {
     font-size: 14px;
+    margin-bottom: 5px;
   }
 
   & li::before {

@@ -15,11 +15,11 @@ const Contact = () => (
       <SubText>Have a project you're interested in discussing with me? Drop me a line below, I’d love to talk.</SubText>
       <Phone>
         <PhoneIcon><img src={smartphoneIcon} alt=""/></PhoneIcon>
-        <PhoneNumber>+27 (0)63 203 0752</PhoneNumber>
+        <PhoneNumber><a href="tel:+27632030752">+27 (0)63 203 0752</a></PhoneNumber>
       </Phone>
       <Email>
         <EmailIcon><img src={emailIcon} alt=""/></EmailIcon>
-        <EmailAddress>hello@murraywilliams.co.za</EmailAddress>
+        <EmailAddress><a href="mailto:hello@murraywilliams.co.za" >hello@murraywilliams.co.za</a></EmailAddress>
       </Email>
       <Location>
         <LocationIcon><img src={locationIcon} alt=""/></LocationIcon>
@@ -46,6 +46,7 @@ export default Contact
 const Wrapper = styled.div`
   padding-left: 10%;
   padding-right: 10%;
+  margin-bottom: 80px;
   color: #272727;
   margin-top: 80px;
 
@@ -112,7 +113,14 @@ const PhoneIcon = styled.div`
   }
 `
 const PhoneNumber = styled.div`
+  a {
+    text-decoration: none;
+    color: #272727;
 
+    &:hover {
+      border-bottom: 2px solid #FFC70B;
+    }
+  }
 `
 const Email = styled.div`
   font-weight: 600;
@@ -129,7 +137,14 @@ const EmailIcon = styled.div`
   }
 `
 const EmailAddress = styled.div`
+  a {
+    text-decoration: none;
+    color: #272727;
 
+    &:hover {
+      border-bottom: 2px solid #FFC70B;
+    }
+  }
 `
 const Location = styled.div`
   font-weight: 600;

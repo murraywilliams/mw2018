@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import About from '../components/About/index'
 import Clients from '../components/Clients/index'
 import Contact from '../components/Contact/index'
+import Footer from '../components/Footer/index'
 
 const IndexPage = () => (
   <div>
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <About />
     <Clients />
     <Contact />
+    <Footer />
   </div>
 )
 

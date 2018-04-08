@@ -27,13 +27,15 @@ const Contact = () => (
       </Location>
     </LHS>
     <RHS>
-      <form name="contact" method="POST" netlify>
-        <input type="text" placeholder="Enter your name"/>
-        <input type="text" placeholder="Enter your contact number"/>
-        <input type="email" placeholder="Enter your email"/>
-        <input type="hidden" name="bot-field" />
-        <input type="submit" value="Get In Touch" />
-      </form>
+      <div id="contact">
+        <form name="contact" method="POST" netlify>
+          <input type="text" placeholder="Enter your name"/>
+          <input type="text" placeholder="Enter your contact number"/>
+          <input type="email" placeholder="Enter your email"/>
+          <input type="hidden" name="bot-field" />
+          <input type="submit" value="Get In Touch" />
+        </form>
+      </div>
     </RHS>
   </SplitColumns>
   </Wrapper>
@@ -47,6 +49,10 @@ const Wrapper = styled.div`
   color: #272727;
   margin-top: 80px;
 
+  @media (max-width: 768px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   @media (max-width: 420px) {
     padding-left: 5%;
     padding-right: 5%;
@@ -160,6 +166,13 @@ flex-basis: 100%;
     width: 80%;
     border: 1px solid #E0E0E0;
     background-image: none !important;
+
+    @media (max-width: 420px) {
+      width: 100%;
+    }
+    @media (max-width: 320px) {
+      width: 100%;
+    }
   }
 
   & input[type=submit] {
@@ -167,8 +180,15 @@ flex-basis: 100%;
     border: none;
     width: 50%
 
+    @media (max-width: 768px) {
+      width: 80%;
+    }
     @media (max-width: 420px) {
       width: 80%;
+    }
+
+    @media (max-width: 320px) {
+      width: 100%;
     }
   }
   & input::-webkit-input-placeholder { /* Chrome/Opera/Safari */

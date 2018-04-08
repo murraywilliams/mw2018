@@ -10,7 +10,7 @@ const About = () => (
       <LHS>
       <AboutSub>I’ve been designing and building websites for years.</AboutSub>
       <AboutDescription>I have a vast set of skills that range from design & development through to marketing and SEO. I have over 10 years of expreince in the digital industry and have worked with big global companies around the world. I don’t enjoy digital I love it and ensure that I am always reading & researching new technologies.</AboutDescription>
-      <ContactButton>Get in touch</ContactButton>
+      <ContactButton><Link to="/#contact">Get in touch</Link></ContactButton>
       </LHS>
       <RHS>
         <SkillWrapper>
@@ -44,6 +44,10 @@ const Wrapper = styled.div`
   color: #272727;
   margin-top: 80px;
 
+  @media (max-width: 768px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   @media (max-width: 420px) {
     padding-left: 5%;
     padding-right: 5%;
@@ -67,6 +71,9 @@ const Heading = styled.h2`
 const Inner = styled.div`
   display: flex;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
   @media (max-width: 420px) {
     flex-direction: column;
   }
@@ -75,6 +82,10 @@ const LHS = styled.div`
   flex-basis: 100%;
   padding-right: 60px;
 
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+    padding-right: 5%;
+  }
   @media (max-width: 420px) {
     margin-bottom: 40px;
     padding-right: 0;
@@ -96,10 +107,25 @@ const ContactButton = styled.div`
   font-size: 14px;
   font-weight: 600;
   text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #272727;
+  }
+
+  &:hover {
+    background: #FFC70B;
+  }
 
   @media (max-width: 420px) {
     width: 300px;
     margin: 0 auto;
+  }
+  @media (max-width: 320px) {
+    width: 250px;
   }
 `
 const RHS = styled.div`

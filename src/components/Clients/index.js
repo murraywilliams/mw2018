@@ -37,6 +37,10 @@ const Wrapper = styled.div`
   color: #272727;
   margin-top: 80px;
 
+  @media (max-width: 768px) {
+    padding: 0 0;
+    margin-top: 10px;
+  }
   @media (max-width: 420px) {
     padding: 0 0;
     margin-top: 10px;
@@ -50,6 +54,9 @@ const SubText = styled.h4`
   text-align: left;
   margin-bottom: 0;
 
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
   @media (max-width: 420px) {
     text-align: center;
   }
@@ -60,6 +67,9 @@ const SplitColumns = styled.div`
   flex-direction: row;
   max-height: 325px;
 
+  @media (max-width: 768px) {
+    max-height: 100%;
+  }
   @media (max-width: 420px) {
     flex-direction: column;
     max-height: 100%;
@@ -69,6 +79,12 @@ const LHS = styled.div`
   flex-basis: 100%;
   background: #272727;
 
+  @media (max-width: 1024px) {
+    padding-top: 10%;
+  }
+  @media (max-width: 768px) {
+    padding-top: 9%;
+  }
   @media (max-width: 420px) {
     padding: 40px 0;
   }
@@ -85,6 +101,16 @@ const LeftInner = styled.div`
     margin-bottom: 0;
   }
 
+  @media (max-width: 1024px) {
+    & img {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    & img {
+      display: none;
+    }
+  }
   @media (max-width: 420px) {
     & img {
       display: none;
@@ -98,8 +124,12 @@ const RHS = styled.div`
   padding-top: 20px;
   background: #F8F8F8;
 
+  @media (max-width: 768px) {
+    padding-left: 30px;
+  }
   @media (max-width: 420px) {
     margin-top: 20px;
+    padding-left: 30px;
   }
 
   & ul {

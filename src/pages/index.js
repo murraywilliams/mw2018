@@ -24,6 +24,12 @@ const Banner = styled.div`
   background: #272727;
   padding: 80px 10%;
 
+  @media (max-width: 1024px) {
+    padding: 60px 10%;
+  }
+  @media (max-width: 768px) {
+    padding: 40px 5%;
+  }
   @media (max-width: 420px) {
     padding: 40px 5%;
   }
@@ -38,11 +44,28 @@ const Title = styled.h2`
   padding-bottom: 40px;
   line-height: 0.9;
 
+  @media (max-width: 1024px) {
+    width: 90%;
+    font-size: 80px;
+    border-bottom: 6px solid #FFC70B;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+    font-size: 80px;
+    border-bottom: 6px solid #FFC70B;
+    padding-bottom: 30px;
+    margin: 40px 0;
+  }
   @media (max-width: 420px) {
     width: 90%;
     font-size: 50px;
     border-bottom: 6px solid #FFC70B;
     padding-bottom: 30px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 43px;
   }
 
 `
@@ -53,8 +76,20 @@ const Subtitle = styled.p`
   line-height: 2;
   letter-spacing: 4px;
 
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
   @media (max-width: 420px) {
     width: 90%;
     font-size: 14px;
+  }
+
+  @media (max-width: 320px) {
+    width: 100%;
+    font-size: 13px;
   }
 `

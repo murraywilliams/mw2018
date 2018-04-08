@@ -21,6 +21,20 @@ const Wrapper = styled.div`
   padding-left: 10%;
   padding-right: 10%;
   background: #272727;
+
+  @media (max-width: 768px) {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10px;
+  }
+  @media (max-width: 420px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  @media (max-width: 320px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 `
 const Headerbar = styled.div`
   display: flex;

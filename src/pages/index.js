@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 import About from '../components/About/index'
+import Clients from '../components/Clients/index'
 import Contact from '../components/Contact/index'
 
 const IndexPage = () => (
@@ -12,6 +13,7 @@ const IndexPage = () => (
       <Subtitle>As a designer and developer, I understand that perfect user interface should look good and work even better. Alongside my clients, I uncover problems and solve them. In short, I create bolder online experiences.</Subtitle>
     </Banner>
     <About />
+    <Clients />
     <Contact />
   </div>
 )

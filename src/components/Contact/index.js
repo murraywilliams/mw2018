@@ -31,7 +31,7 @@ const Contact = () => (
         <input type="text" placeholder="Enter your name"/>
         <input type="text" placeholder="Enter your contact number"/>
         <input type="email" placeholder="Enter your email"/>
-        <input name="bot-field" />
+        <input type="hidden" name="bot-field" />
         <input type="submit" value="Get In Touch" />
       </form>
     </RHS>

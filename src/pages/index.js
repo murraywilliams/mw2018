@@ -2,11 +2,16 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+import About from '../components/About/index'
+
 const IndexPage = () => (
-  <Banner>
-    <Title>freelance <br/>developer</Title>
-    <Subtitle>As a designer and developer, I understand that perfect user interface should look good and work even better. Alongside my clients, I uncover problems and solve them. In short, I create bolder online experiences.</Subtitle>
-  </Banner>
+  <div>
+    <Banner>
+      <Title>freelance <br/>developer</Title>
+      <Subtitle>As a designer and developer, I understand that perfect user interface should look good and work even better. Alongside my clients, I uncover problems and solve them. In short, I create bolder online experiences.</Subtitle>
+    </Banner>
+    <About />
+  </div>
 )
 
 export default IndexPage;

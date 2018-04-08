@@ -51,7 +51,7 @@ const Logo = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 
   & img {
     margin-bottom: 0;
@@ -68,8 +68,9 @@ const Social = styled.div`
   justify-content: center;
 
   img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 0;
   }
 
   & img:first-child {

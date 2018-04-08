@@ -11,6 +11,9 @@ const Header = () => (
           <img src={logo} alt=""/>
         </Link>
       </Logo>
+      <CTA>
+        <p>Let's work together <span><Link to="/#contact">get in touch</Link></span></p>
+      </CTA>
     </Headerbar>
   </Wrapper>
 )
@@ -20,7 +23,9 @@ export default Header
 const Wrapper = styled.div`
   padding-left: 10%;
   padding-right: 10%;
+  padding-bottom: 20px;
   background: #272727;
+  border-bottom: 2px solid #3B3B3B;
 
   @media (max-width: 768px) {
     padding-left: 5%;
@@ -38,12 +43,36 @@ const Wrapper = styled.div`
 `
 const Headerbar = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-top: 20px;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
 `
 const Logo = styled.div`
 
   & img {
     margin-bottom: 0;
+  }
+`
+const CTA = styled.div`
+  font-size: 12px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  span {
+    padding: 5px;
+    margin-left: 5px;
+
+    text-transform: uppercase;
+    background: #FFC70B;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: #272727;
+    }
   }
 `

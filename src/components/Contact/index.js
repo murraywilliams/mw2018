@@ -3,20 +3,27 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import logo from '../../assets/mw-logo.png'
 
+import smartphoneIcon from '../../assets/smartphone-icon.png'
+import locationIcon from '../../assets/location-icon.png'
+import emailIcon from '../../assets/email-icon.png'
+
 const Contact = () => (
   <Wrapper>
   <Heading>Get in touch</Heading>
-  <SubText>Have a project you're interested in discussing with me? Drop me a line below, I’d love to talk.</SubText>
   <SplitColumns>
     <LHS>
-      <Number>
-        +27 (0)63 203 0752
-      </Number>
+      <SubText>Have a project you're interested in discussing with me? Drop me a line below, I’d love to talk.</SubText>
+      <Phone>
+        <PhoneIcon><img src={smartphoneIcon} alt=""/></PhoneIcon>
+        <PhoneNumber>+27 (0)63 203 0752</PhoneNumber>
+      </Phone>
       <Email>
-        hello@murraywilliams.co.za
+        <EmailIcon><img src={emailIcon} alt=""/></EmailIcon>
+        <EmailAddress>hello@murraywilliams.co.za</EmailAddress>
       </Email>
       <Location>
-        Location: Cape Town
+        <LocationIcon><img src={locationIcon} alt=""/></LocationIcon>
+        <Address>Cape Town, South Africa</Address>
       </Location>
     </LHS>
     <RHS>
@@ -54,8 +61,10 @@ const Heading = styled.h2`
   }
 `
 const SubText = styled.h4`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
+  padding-right: 60px;
+  line-height: 2;
 `
 const SplitColumns = styled.div`
   display: flex;
@@ -65,14 +74,55 @@ const SplitColumns = styled.div`
 const LHS = styled.div`
   flex-basis: 100%;
 `
-const Number = styled.p`
+const Phone = styled.div`
   font-weight: 600;
+  display: flex;
+  align-items: center;
 `
-const Email = styled.p`
-  font-weight: 600;
+const PhoneIcon = styled.div`
+  width: 20px;
+  margin-right: 10px;
+
+  & img {
+    margin-bottom: 0;
+  }
 `
-const Location = styled.p`
+const PhoneNumber = styled.div`
+
+`
+const Email = styled.div`
   font-weight: 600;
+  display: flex;
+  align-items: center;
+`
+const EmailIcon = styled.div`
+  width: 20px;
+  margin-right: 10px;
+  margin-top: 20px;
+
+  & img {
+    margin-bottom: 0;
+  }
+`
+const EmailAddress = styled.div`
+
+`
+const Location = styled.div`
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+`
+const LocationIcon = styled.div`
+  width: 20px;
+  margin-right: 10px;
+  margin-top: 20px;
+
+  & img {
+    margin-bottom: 0;
+  }
+`
+const Address = styled.div`
+
 `
 const AddressDetails = styled.div`
 

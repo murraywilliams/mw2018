@@ -43,6 +43,12 @@ const Wrapper = styled.div`
   padding-right: 10%;
   color: #272727;
   margin-top: 80px;
+
+  @media (max-width: 420px) {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 40px;
+  }
 `
 const Heading = styled.h2`
   font-size: 40px;
@@ -60,10 +66,19 @@ const Heading = styled.h2`
 `
 const Inner = styled.div`
   display: flex;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+  }
 `
 const LHS = styled.div`
   flex-basis: 100%;
   padding-right: 60px;
+
+  @media (max-width: 420px) {
+    margin-bottom: 40px;
+    padding-right: 0;
+  }
 `
 const AboutSub = styled.h4`
   font-size: 18px;
@@ -81,6 +96,11 @@ const ContactButton = styled.div`
   font-size: 14px;
   font-weight: 600;
   text-align: center;
+
+  @media (max-width: 420px) {
+    width: 300px;
+    margin: 0 auto;
+  }
 `
 const RHS = styled.div`
   flex-basis: 100%;

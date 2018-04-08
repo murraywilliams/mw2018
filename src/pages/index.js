@@ -10,7 +10,7 @@ const IndexPage = () => (
   <div>
     <Banner>
       <Title>freelance <br/>developer</Title>
-      <Subtitle>As a designer and developer, I understand that perfect user interface should look good and work even better. Alongside my clients, I uncover problems and solve them. In short, I create bolder online experiences.</Subtitle>
+      <Subtitle>As a designer and developer, I understand that a perfect user interface should look good and work even better. Alongside my clients, I uncover problems and together we help solve them. In short, I partner with my clients to create bolder online experiences.</Subtitle>
     </Banner>
     <About />
     <Clients />
@@ -23,6 +23,10 @@ export default IndexPage;
 const Banner = styled.div`
   background: #272727;
   padding: 80px 10%;
+
+  @media (max-width: 420px) {
+    padding: 40px 5%;
+  }
 `
 const Title = styled.h2`
   font-size: 80px;
@@ -33,6 +37,14 @@ const Title = styled.h2`
   width: 40%;
   padding-bottom: 40px;
   line-height: 0.9;
+
+  @media (max-width: 420px) {
+    width: 90%;
+    font-size: 50px;
+    border-bottom: 6px solid #FFC70B;
+    padding-bottom: 30px;
+  }
+
 `
 const Subtitle = styled.p`
   font-size: 16px;
@@ -40,4 +52,9 @@ const Subtitle = styled.p`
   color: white;
   line-height: 2;
   letter-spacing: 4px;
+
+  @media (max-width: 420px) {
+    width: 90%;
+    font-size: 14px;
+  }
 `

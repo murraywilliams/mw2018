@@ -36,6 +36,11 @@ const Wrapper = styled.div`
   padding-right: 10%;
   color: #272727;
   margin-top: 80px;
+
+  @media (max-width: 420px) {
+    padding: 0 0;
+    margin-top: 10px;
+  }
 `
 const SubText = styled.h4`
   font-size: 22px;
@@ -44,15 +49,30 @@ const SubText = styled.h4`
   line-height: 2.2;
   text-align: left;
   margin-bottom: 0;
+
+  @media (max-width: 420px) {
+    text-align: center;
+  }
 `
 const SplitColumns = styled.div`
   display: flex;
   min-height: 100%;
   flex-direction: row;
+  max-height: 325px;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+    max-height: 100%;
+  }
 `
 const LHS = styled.div`
   flex-basis: 100%;
   background: #272727;
+
+  @media (max-width: 420px) {
+    padding: 40px 0;
+  }
+
 `
 const LeftInner = styled.div`
   display: flex;
@@ -65,12 +85,22 @@ const LeftInner = styled.div`
     margin-bottom: 0;
   }
 
+  @media (max-width: 420px) {
+    & img {
+      display: none;
+    }
+  }
+
 `
 const RHS = styled.div`
   flex-basis: 100%;
   padding-left: 60px;
   padding-top: 20px;
   background: #F8F8F8;
+
+  @media (max-width: 420px) {
+    margin-top: 20px;
+  }
 
   & ul {
     list-style: none;
@@ -83,6 +113,7 @@ const RHS = styled.div`
   & li::before {
     content: "• ";
     color: #FFC70B;
+    font-size: 18px;
   }
 `
 

@@ -46,6 +46,11 @@ const Wrapper = styled.div`
   padding-right: 10%;
   color: #272727;
   margin-top: 80px;
+
+  @media (max-width: 420px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 `
 const Heading = styled.h2`
   font-size: 40px;
@@ -66,14 +71,26 @@ const SubText = styled.h4`
   font-weight: 400;
   padding-right: 60px;
   line-height: 2;
+
+  @media (max-width: 420px) {
+    padding-right: 0;
+  }
 `
 const SplitColumns = styled.div`
   display: flex;
   min-height: 100%;
   flex-direction: row;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+  }
 `
 const LHS = styled.div`
   flex-basis: 100%;
+
+  @media (max-width: 420px) {
+    margin-bottom: 20px;
+  }
 `
 const Phone = styled.div`
   font-weight: 600;
@@ -133,10 +150,15 @@ flex-basis: 100%;
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 420px) {
+    text-align: center;
+  }
+
   & input {
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px 0;
     width: 80%;
+    border: 1px solid #E0E0E0;
     background-image: none !important;
   }
 
@@ -144,6 +166,10 @@ flex-basis: 100%;
     background: #FFC70B;
     border: none;
     width: 50%
+
+    @media (max-width: 420px) {
+      width: 80%;
+    }
   }
   & input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #ADADAD;

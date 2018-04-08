@@ -1,33 +1,35 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
+import logo from '../../assets/mw-logo.png'
 
 const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
+  <Wrapper>
+    <Headerbar>
+      <Logo>
+        <Link to="/">
+          <img src={logo} alt=""/>
         </Link>
-      </h1>
-    </div>
-  </div>
+      </Logo>
+    </Headerbar>
+  </Wrapper>
 )
 
 export default Header
+
+const Wrapper = styled.div`
+  padding-left: 10%;
+  padding-right: 10%;
+  background: #272727;
+`
+const Headerbar = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+`
+const Logo = styled.div`
+
+  & img {
+    margin-bottom: 0;
+  }
+`

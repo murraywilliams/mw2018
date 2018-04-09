@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react';
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import logo from '../../assets/mw-logo.png'
@@ -7,41 +7,121 @@ import smartphoneIcon from '../../assets/smartphone-icon.png'
 import locationIcon from '../../assets/location-icon.png'
 import emailIcon from '../../assets/email-icon.png'
 
-const Contact = () => (
-  <Wrapper>
-  <Heading>Get in touch</Heading>
-  <SplitColumns>
-    <LHS>
-      <SubText>Have a project you're interested in discussing with me? Drop me a line below, I’d love to talk.</SubText>
-      <Phone>
-        <PhoneIcon><img src={smartphoneIcon} alt=""/></PhoneIcon>
-        <PhoneNumber><a href="tel:+27632030752">+27 (0)63 203 0752</a></PhoneNumber>
-      </Phone>
-      <Email>
-        <EmailIcon><img src={emailIcon} alt=""/></EmailIcon>
-        <EmailAddress><a href="mailto:hello@murraywilliams.co.za" >hello@murraywilliams.co.za</a></EmailAddress>
-      </Email>
-      <Location>
-        <LocationIcon><img src={locationIcon} alt=""/></LocationIcon>
-        <Address>Cape Town, South Africa</Address>
-      </Location>
-    </LHS>
-    <RHS>
-      <div id="contact">
-        <form name="contact" method="POST" netlify>
-          <input type="text" placeholder="Enter your name"/>
-          <input type="text" placeholder="Enter your contact number"/>
-          <input type="email" placeholder="Enter your email"/>
-          <input type="hidden" name="bot-field" />
-          <input type="submit" value="Get In Touch" />
-        </form>
-      </div>
-    </RHS>
-  </SplitColumns>
-  </Wrapper>
-)
+class Contact extends Component {
+  state = {
+    email: '',
+    success: false
+  }
 
-export default Contact
+  encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    fetch("/" , {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: this.encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => {
+        this.setState({
+          success: true
+        });
+      })
+      .catch(error => alert(error));
+  }
+  render() {
+    const success = this.state.success;
+    const renderForm = !success ? (
+      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" placeholder="Enter your name"/>
+        <input type="text" placeholder="Enter your contact number"/>
+        <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Enter your email"/>
+        <input type="hidden" name="bot-field" />
+        <input type="submit" value="Get In Touch" />
+      </form>
+    ) : (
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'end',
+          alignItems: 'center',
+          fontSize: '12px',
+          color: '#64CCC9'
+        }}>
+        Your message sent successfully!
+        </div>
+    )
+
+    return (
+      <Wrapper>
+      <Heading>Get in touch</Heading>
+      <SplitColumns>
+        <LHS>
+          <SubText>Have a project you're interested in discussing with me? Drop me a line below, I’d love to talk.</SubText>
+          <Phone>
+            <PhoneIcon><img src={smartphoneIcon} alt=""/></PhoneIcon>
+            <PhoneNumber><a href="tel:+27632030752">+27 (0)63 203 0752</a></PhoneNumber>
+          </Phone>
+          <Email>
+            <EmailIcon><img src={emailIcon} alt=""/></EmailIcon>
+            <EmailAddress><a href="mailto:hello@murraywilliams.co.za" >hello@murraywilliams.co.za</a></EmailAddress>
+          </Email>
+          <Location>
+            <LocationIcon><img src={locationIcon} alt=""/></LocationIcon>
+            <Address>Cape Town, South Africa</Address>
+          </Location>
+        </LHS>
+        <RHS>
+          <div id="contact">
+            {renderForm}
+          </div>
+        </RHS>
+      </SplitColumns>
+      </Wrapper>
+    );
+  }
+}
+
+export default Contact;
+
+// const Contact = () => (
+//   <Wrapper>
+//   <Heading>Get in touch</Heading>
+//   <SplitColumns>
+//     <LHS>
+//       <SubText>Have a project you're interested in discussing with me? Drop me a line below, I’d love to talk.</SubText>
+//       <Phone>
+//         <PhoneIcon><img src={smartphoneIcon} alt=""/></PhoneIcon>
+//         <PhoneNumber><a href="tel:+27632030752">+27 (0)63 203 0752</a></PhoneNumber>
+//       </Phone>
+//       <Email>
+//         <EmailIcon><img src={emailIcon} alt=""/></EmailIcon>
+//         <EmailAddress><a href="mailto:hello@murraywilliams.co.za" >hello@murraywilliams.co.za</a></EmailAddress>
+//       </Email>
+//       <Location>
+//         <LocationIcon><img src={locationIcon} alt=""/></LocationIcon>
+//         <Address>Cape Town, South Africa</Address>
+//       </Location>
+//     </LHS>
+//     <RHS>
+//       <div id="contact">
+
+//       </div>
+//     </RHS>
+//   </SplitColumns>
+//   </Wrapper>
+// )
+
+// export default Contact
 
 const Wrapper = styled.div`
   padding-left: 10%;

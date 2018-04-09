@@ -8,18 +8,18 @@ import locationIcon from '../../assets/location-icon.png'
 import emailIcon from '../../assets/email-icon.png'
 import formSuccess from '../../assets/form-success-icon.png'
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 class Contact extends Component {
   state = {
     name: '',
     number: '',
     email: '',
     success: false
-  }
-
-  encode = (data) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
   }
 
   handleChange = (e) => {
@@ -31,7 +31,7 @@ class Contact extends Component {
     fetch("/" , {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: this.encode({ "form-name": "contact", ...this.state })
+      body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => {
         this.setState({
@@ -241,10 +241,11 @@ flex-basis: 100%;
 
   & input {
     margin: 10px 0;
-    padding: 10px 0;
+    padding: 10px 10px;
     width: 80%;
     border: 1px solid #E0E0E0;
     background-image: none !important;
+    font-size: 14px;
 
     @media (max-width: 420px) {
       width: 100%;

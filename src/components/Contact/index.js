@@ -140,7 +140,7 @@ const FormSuccess = styled.div`
   text-align: center;
 
   img {
-    width: 30%;
+    width: 120px;
   }
   span {
     font-weight: 600;

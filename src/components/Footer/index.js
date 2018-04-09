@@ -2,9 +2,11 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import logo from '../../assets/footer-icon.jpg'
+import logo from '../../assets/footer-logo.png'
 import github from '../../assets/github-icon.png'
+import githubHover from '../../assets/github-icon--hover.png'
 import linkedin from '../../assets/linked-icon.png'
+import linkedinHover from '../../assets/linked-icon--hover.png'
 
 
 const Footer = () => (
@@ -28,7 +30,7 @@ export default Footer
 const Wrapper = styled.div`
   padding-left: 10%;
   padding-right: 10%;
-  border-top: 4px solid #F8F8F8;
+  background: #222;
 
 
 `
@@ -37,12 +39,12 @@ const Headerbar = styled.div`
   flex-direction: column;
 
   padding-top: 20px;
-  color: #D2D2D2;
+  color: #646464;
 
   p {
     font-size: 12px;
     text-align: center;
-    color: #272727;
+    color: #646464;
     text-transform: uppercase;
   }
 `
@@ -51,11 +53,11 @@ const Logo = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 
   & img {
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-right: 10px;
     width: 40px;
     height: 40px;
   }

@@ -41,23 +41,42 @@ const Title = styled.h2`
   font-weight: 900;
   text-transform: uppercase;
   color: white;
-  border-bottom: 8px solid #FFC70B;
-  width: 40%;
   padding-bottom: 40px;
   line-height: 0.9;
 
+  &::after {
+    content: " ";
+    padding-top: 10px;
+    padding-right: 50%;
+    border-bottom: 8px solid #FFC70B;
+    width: 50%;
+    height: 8px;
+    display: block;
+  }
+
   @media (max-width: 1024px) {
-    width: 90%;
-    font-size: 80px;
-    border-bottom: 6px solid #FFC70B;
-    padding-bottom: 30px;
+
+    &::after {
+      content: " ";
+      padding-top: 10px;
+      padding-bottom: 30px;
+      border-bottom: 8px solid #FFC70B;
+      width: 50%;
+      height: 8px;
+      display: block;
+    }
   }
   @media (max-width: 768px) {
-    width: 90%;
-    font-size: 80px;
-    border-bottom: 6px solid #FFC70B;
-    padding-bottom: 30px;
-    margin: 40px 0;
+
+    &::after {
+      content: " ";
+      padding-top: 10px;
+      padding-bottom: 30px;
+      border-bottom: 8px solid #FFC70B;
+      width: 60%;
+      height: 8px;
+      display: block;
+    }
   }
   @media (max-width: 420px) {
     width: 90%;
@@ -77,6 +96,10 @@ const Subtitle = styled.p`
   color: white;
   line-height: 2;
   letter-spacing: 4px;
+
+  @media (max-width: 1440px) {
+    width: 60%;
+  }
 
   @media (max-width: 1024px) {
     width: 90%;

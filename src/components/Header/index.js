@@ -24,8 +24,7 @@ const Wrapper = styled.div`
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 20px;
-  background: #272727;
-  border-bottom: 2px solid #3B3B3B;
+  background: #222;
 
   @media (max-width: 768px) {
     padding-left: 5%;

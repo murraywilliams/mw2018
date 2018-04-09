@@ -67,6 +67,7 @@ const Title = styled.h2`
     }
   }
   @media (max-width: 768px) {
+    font-size: 55px;
 
     &::after {
       content: " ";
@@ -81,12 +82,21 @@ const Title = styled.h2`
   @media (max-width: 420px) {
     width: 90%;
     font-size: 50px;
-    border-bottom: 6px solid #FFC70B;
-    padding-bottom: 30px;
+
+    &::after {
+
+      content: " ";
+      padding-top: 10px;
+      padding-bottom: 5px;
+      border-bottom: 6px solid #FFC70B;
+      width: 60%;
+      height: 8px;
+      display: block;
   }
 
   @media (max-width: 320px) {
-    font-size: 43px;
+    font-size: 35px;
+    padding-bottom: 20px;
   }
 
 `

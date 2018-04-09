@@ -17,7 +17,9 @@ const Footer = () => (
         <h3>MURRAY WILLIAMS</h3>
       </Logo>
         <Social>
-          <a href="https://www.linkedin.com/in/im-murray-williams" target="_blank"><img src={linkedin} alt=""/></a>
+          <a href="https://www.linkedin.com/in/im-murray-williams" target="_blank">
+            <img src={linkedin} alt=""/>
+          </a>
           <a href="https://github.com/murraywilliams" target="_blank"><img src={github} alt=""/></a>
         </Social>
       <p>Built with GatsbyJS & continous deployment provided by Netlify.</p>

@@ -54,6 +54,15 @@ const SubText = styled.h4`
   text-align: left;
   margin-bottom: 0;
 
+  @media (max-width: 1320px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 1130px) {
+    font-size: 22px;
+    text-align: center;
+  }
+
   @media (max-width: 1024px) {
     text-align: center;
   }
@@ -80,7 +89,7 @@ const LHS = styled.div`
   background: #272727;
 
   @media (max-width: 1024px) {
-    padding-top: 10%;
+
   }
   @media (max-width: 768px) {
     padding-top: 9%;
@@ -97,11 +106,16 @@ const LeftInner = styled.div`
 
   & img {
     width: 50%;
-    height: 50%;
+    min-height: 325px;
     margin-bottom: 0;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1320px) {
+    height: 100%;
+  }
+
+  @media (max-width: 1130px) {
+    height: 100%;
     & img {
       display: none;
     }

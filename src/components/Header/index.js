@@ -59,6 +59,10 @@ const CTA = styled.div`
 
   p {
     margin-bottom: 0;
+
+    @media (max-width: 320px) {
+      display: none;
+    }
   }
 
   span {

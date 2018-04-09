@@ -6,9 +6,12 @@ import logo from '../../assets/mw-logo.png'
 import smartphoneIcon from '../../assets/smartphone-icon.png'
 import locationIcon from '../../assets/location-icon.png'
 import emailIcon from '../../assets/email-icon.png'
+import formSuccess from '../../assets/form-success-icon.png'
 
 class Contact extends Component {
   state = {
+    name: '',
+    number: '',
     email: '',
     success: false
   }
@@ -34,6 +37,7 @@ class Contact extends Component {
         this.setState({
           success: true
         });
+        console.log(this.state);
       })
       .catch(error => alert(error));
   }
@@ -42,23 +46,17 @@ class Contact extends Component {
     const renderForm = !success ? (
       <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
-        <input type="text" placeholder="Enter your name"/>
-        <input type="text" placeholder="Enter your contact number"/>
+        <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Enter your name"/>
+        <input type="text" id="number" name="number" value={this.state.number} onChange={this.handleChange} placeholder="Enter your contact number"/>
         <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Enter your email"/>
         <input type="hidden" name="bot-field" />
         <input type="submit" value="Get In Touch" />
       </form>
     ) : (
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'end',
-          alignItems: 'center',
-          fontSize: '12px',
-          color: '#64CCC9'
-        }}>
-        Your message sent successfully!
-        </div>
+      <FormSuccess>
+        <img src={formSuccess} alt=""/>
+        <p>Your message has been <span>successfully</span> sent. <br/>I look forward to connecting with you!</p>
+      </FormSuccess>
     )
 
     return (
@@ -92,36 +90,6 @@ class Contact extends Component {
 }
 
 export default Contact;
-
-// const Contact = () => (
-//   <Wrapper>
-//   <Heading>Get in touch</Heading>
-//   <SplitColumns>
-//     <LHS>
-//       <SubText>Have a project you're interested in discussing with me? Drop me a line below, I’d love to talk.</SubText>
-//       <Phone>
-//         <PhoneIcon><img src={smartphoneIcon} alt=""/></PhoneIcon>
-//         <PhoneNumber><a href="tel:+27632030752">+27 (0)63 203 0752</a></PhoneNumber>
-//       </Phone>
-//       <Email>
-//         <EmailIcon><img src={emailIcon} alt=""/></EmailIcon>
-//         <EmailAddress><a href="mailto:hello@murraywilliams.co.za" >hello@murraywilliams.co.za</a></EmailAddress>
-//       </Email>
-//       <Location>
-//         <LocationIcon><img src={locationIcon} alt=""/></LocationIcon>
-//         <Address>Cape Town, South Africa</Address>
-//       </Location>
-//     </LHS>
-//     <RHS>
-//       <div id="contact">
-
-//       </div>
-//     </RHS>
-//   </SplitColumns>
-//   </Wrapper>
-// )
-
-// export default Contact
 
 const Wrapper = styled.div`
   padding-left: 10%;
@@ -161,6 +129,22 @@ const SubText = styled.h4`
 
   @media (max-width: 420px) {
     padding-right: 0;
+  }
+`
+const FormSuccess = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-style: italic;
+  align-items: center;
+  text-align: center;
+
+  img {
+    width: 30%;
+  }
+  span {
+    font-weight: 600;
+    color: #FFC70B;
   }
 `
 const SplitColumns = styled.div`

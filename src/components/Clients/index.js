@@ -15,11 +15,11 @@ const Clients = () => (
     <Wrapper>
       <ClientWrapper>
         <Logos>
-          <img src={ehl} alt=""/>
-          <img src={accenture} alt=""/>
-          <img src={ilhm} alt=""/>
-          <img src={thompson} alt=""/>
-          <img src={tyson} alt=""/>
+          <p><a href="http://www.ehl.edu/" target="_BLANK">EHL</a></p>
+          <p><a href="https://www.accenture.com/" target="_BLANK">Accenture</a></p>
+          <p><a href="http://www.luxuryhomemarketing.com/real-estate-agents/home.html" target="_BLANK">ILHM</a></p>
+          <p><a href="https://www.thomsonreuters.com/" target="_BLANK">Thompson Reuters</a></p>
+          <p><a href="https://www.tysonfoods.com/" target="_BLANK">Tyson</a></p>
         </Logos>
       </ClientWrapper>
     </Wrapper>
@@ -79,7 +79,30 @@ const Heading = styled.h2`
 const Logos = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 20px 0;
 
+  p {
+    margin-bottom: 0;
+    border: 2px solid #B5B5B5;
+    padding: 15px;
+    cursor: pointer;
+
+    &:hover {
+      background: #FFC70B;
+      border: 2px solid #FFC70B;
+
+      a {
+        color: #272727;
+      }
+    }
+
+    a {
+      color: #B5B5B5;
+      font-family: 'Roboto',sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
   img {
     width: 120px;
     height: 120px;
@@ -93,6 +116,13 @@ const Logos = styled.div`
   }
 
   @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    p {
+      margin: 10px;
+    }
+
     img {
       width: 90px;
       height: 90px;
@@ -102,6 +132,12 @@ const Logos = styled.div`
 
   @media (max-width: 520px) {
     flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    p {
+      margin: 5px;
+    }
   }
 `
 

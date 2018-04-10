@@ -14,7 +14,6 @@ const Footer = () => (
     <Headerbar>
       <Logo>
         <img src={logo} alt=""/>
-        <h3>MURRAY WILLIAMS</h3>
       </Logo>
         <Social>
           <a href="https://www.linkedin.com/in/im-murray-williams" target="_blank">
@@ -22,7 +21,7 @@ const Footer = () => (
           </a>
           <a href="https://github.com/murraywilliams" target="_blank"><img src={github} alt=""/></a>
         </Social>
-      <p>Built with GatsbyJS & continous deployment provided by Netlify.</p>
+      <p>Copyright 2018. Designed & developed by Murray Williams. <br/>Powered with GatsbyJS & continous deployment provided by Netlify.</p>
     </Headerbar>
   </Wrapper>
 )
@@ -33,21 +32,21 @@ const Wrapper = styled.div`
   padding-left: 10%;
   padding-right: 10%;
   background: #222;
-
-
 `
 const Headerbar = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding-top: 20px;
+  padding: 30px 0;
   color: #5A5A5A;
 
   p {
     font-size: 12px;
     text-align: center;
     color: #5A5A5A;
-    text-transform: uppercase;
+    line-height: 1.5;
+    margin-bottom: 0;
+
   }
 `
 const Logo = styled.div`
@@ -60,8 +59,8 @@ const Logo = styled.div`
   & img {
     margin-bottom: 0;
     margin-right: 10px;
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
   }
   h3 {
     margin-bottom: 0;

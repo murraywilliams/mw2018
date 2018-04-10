@@ -3,39 +3,35 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import logo from '../../assets/mw-logo.png'
 
-import ClientImage from '../../assets/clients-image.jpg'
+import ehl from '../../assets/ClientLogos/ehl-logo.png'
+import accenture from '../../assets/ClientLogos/accenture-logo.png'
+import ilhm from '../../assets/ClientLogos/ilhm-logo.png'
+import thompson from '../../assets/ClientLogos/thompson-logo.png'
+import tyson from '../../assets/ClientLogos/tyson-logo.png'
 
 const Clients = () => (
-  <Wrapper>
-  <SplitColumns>
-    <LHS>
-      <LeftInner>
-        <SubText>I’M PASSIONATE ABOUT SOLVING PROBLEMS WITH LOGIC, SIMPLICITY & GREAT UX.</SubText>
-        <img src={ClientImage} alt=""/>
-      </LeftInner>
-    </LHS>
-    <RHS>
-      <ClientHeading>clients i’ve worked with</ClientHeading>
-      <ul>
-        <li>Accenture</li>
-        <li>Thompson Reuters</li>
-        <li>Tyson</li>
-        <li>EHL</li>
-        <li>CEO SleepOut</li>
-        <li>Byte Sized Solutions</li>
-      </ul>
-    </RHS>
-  </SplitColumns>
-  </Wrapper>
+  <div>
+  <Heading>Clients I’ve worked with</Heading>
+    <Wrapper>
+      <ClientWrapper>
+        <Logos>
+          <img src={ehl} alt=""/>
+          <img src={accenture} alt=""/>
+          <img src={ilhm} alt=""/>
+          <img src={thompson} alt=""/>
+          <img src={tyson} alt=""/>
+        </Logos>
+      </ClientWrapper>
+    </Wrapper>
+  </div>
 )
 
 export default Clients
 
 const Wrapper = styled.div`
-  padding-left: 10%;
-  padding-right: 10%;
-  color: #272727;
-  margin-top: 80px;
+  padding-left: 0;
+  padding-right: 0;
+  background: #F6F6F6;
 
   @media (max-width: 768px) {
     padding: 0 0;
@@ -46,124 +42,25 @@ const Wrapper = styled.div`
     margin-top: 10px;
   }
 `
-const SubText = styled.h4`
-  font-size: 22px;
-  font-weight: 400;
-  padding: 0 30px;
-  line-height: 2.2;
-  text-align: left;
-  margin-bottom: 0;
-
-  @media (max-width: 1320px) {
-    font-size: 18px;
-  }
-
-  @media (max-width: 1130px) {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  @media (max-width: 1024px) {
-    text-align: center;
-  }
-  @media (max-width: 420px) {
-    text-align: center;
-  }
-`
-const SplitColumns = styled.div`
-  display: flex;
-  min-height: 100%;
-  flex-direction: row;
-  max-height: 325px;
+const ClientWrapper = styled.div`
+  padding: 20px 10%;
 
   @media (max-width: 768px) {
     max-height: 100%;
+    padding: 20px 5%;
   }
   @media (max-width: 420px) {
     flex-direction: column;
     max-height: 100%;
   }
 `
-const LHS = styled.div`
-  flex-basis: 100%;
-  background: #272727;
 
-  @media (max-width: 1024px) {
-
-  }
-  @media (max-width: 768px) {
-    padding-top: 9%;
-  }
-  @media (max-width: 420px) {
-    padding: 40px 0;
-  }
-
-`
-const LeftInner = styled.div`
-  display: flex;
-  align-items: center;
-  color: white;
-
-  & img {
-    width: 50%;
-    min-height: 325px;
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 1320px) {
-    height: 100%;
-  }
-
-  @media (max-width: 1130px) {
-    height: 100%;
-    & img {
-      display: none;
-    }
-  }
-  @media (max-width: 768px) {
-    & img {
-      display: none;
-    }
-  }
-  @media (max-width: 420px) {
-    & img {
-      display: none;
-    }
-  }
-
-`
-const RHS = styled.div`
-  flex-basis: 100%;
-  padding-left: 60px;
-  padding-top: 20px;
-  background: #F8F8F8;
-
-  @media (max-width: 768px) {
-    padding-left: 30px;
-  }
-  @media (max-width: 420px) {
-    margin-top: 20px;
-    padding-left: 30px;
-  }
-
-  & ul {
-    list-style: none;
-    margin-left: 0;
-  }
-  li {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-
-  & li::before {
-    content: "• ";
-    color: #FFC70B;
-    font-size: 18px;
-  }
-`
-
-const ClientHeading = styled.h5`
+const Heading = styled.h2`
+  font-size: 40px;
+  font-weight: 900;
   text-transform: uppercase;
+  padding-left: 10%;
+  margin-top: 80px;
 
   &::after {
     content: " ";
@@ -172,6 +69,39 @@ const ClientHeading = styled.h5`
     width: 6%;
     height: 6px;
     display: block;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 5%;
+  }
+`
+
+const Logos = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 120px;
+    height: 120px;
+    margin: 0 30px 0 0;
+  }
+
+  @media (max-width: 851px) {
+    img {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 90px;
+      height: 90px;
+      margin: 0 20px 0 0;
+    }
+  }
+
+  @media (max-width: 520px) {
+    flex-wrap: wrap;
   }
 `
 

@@ -41,12 +41,12 @@ const Headerbar = styled.div`
   flex-direction: column;
 
   padding-top: 20px;
-  color: #646464;
+  color: #5A5A5A;
 
   p {
     font-size: 12px;
     text-align: center;
-    color: #646464;
+    color: #5A5A5A;
     text-transform: uppercase;
   }
 `

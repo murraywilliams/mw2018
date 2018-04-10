@@ -50,7 +50,7 @@ class Contact extends Component {
         <input type="text" id="number" name="number" value={this.state.number} onChange={this.handleChange} placeholder="Enter your contact number"/>
         <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Enter your email" required/>
         <input type="hidden" name="bot-field" />
-        <input type="submit" value="Get In Touch" />
+        <input type="submit" value="Submit" />
       </form>
     ) : (
       <FormSuccess>
@@ -257,8 +257,13 @@ flex-basis: 100%;
 
   & input[type=submit] {
     background: #FFC70B;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
     border: none;
-    width: 50%
+    padding: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
 
     @media (max-width: 768px) {
       width: 80%;

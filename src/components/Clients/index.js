@@ -83,13 +83,13 @@ const Logos = styled.div`
 
   p {
     margin-bottom: 0;
-    border: 2px solid #B5B5B5;
+    border: 4px solid #B5B5B5;
     padding: 15px;
     cursor: pointer;
 
     &:hover {
       background: #FFC70B;
-      border: 2px solid #FFC70B;
+      border: 4px solid #FFC70B;
 
       a {
         color: #272727;

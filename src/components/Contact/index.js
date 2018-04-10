@@ -46,9 +46,9 @@ class Contact extends Component {
     const renderForm = !success ? (
       <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
-        <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Enter your name"/>
+        <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Enter your name" required/>
         <input type="text" id="number" name="number" value={this.state.number} onChange={this.handleChange} placeholder="Enter your contact number"/>
-        <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Enter your email"/>
+        <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Enter your email" required/>
         <input type="hidden" name="bot-field" />
         <input type="submit" value="Get In Touch" />
       </form>

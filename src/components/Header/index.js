@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 20px;
-  background: #222;
+  background: #272727;
 
   @media (max-width: 768px) {
     padding-left: 5%;
@@ -70,12 +70,12 @@ const CTA = styled.div`
     margin-left: 5px;
 
     text-transform: uppercase;
-    background: #FFC70B;
+    border: 2px solid #FFC70B;
     cursor: pointer;
 
     a {
       text-decoration: none;
-      color: #272727;
+      color: #FFC70B;
     }
   }
 `

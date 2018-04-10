@@ -93,7 +93,7 @@ const LHS = styled.div`
 `
 const AboutSub = styled.h4`
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 600;
 `
 const AboutDescription = styled.p`
   font-size: 16px;

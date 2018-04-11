@@ -17,8 +17,9 @@ import retailIcon from '../../assets/IndustryIcons/retail.png'
 
 const Clients = () => (
   <div>
-  <Heading>Clients I’ve worked with</Heading>
-  <Intro>I’ve worked with various global fortune 500 companies based all around the world, all in exciting innovate industries.</Intro>
+  <Heading>Indsutries I’ve worked with</Heading>
+  <Intro>I've worked with a range of big companies around the world most of which are fortune 500 companies. These companies range from big corporate B2B's right down the small startups. This variety has allowed me to gain insight into many areas of business and understand problems from a macro and micro level.
+  </Intro>
     <Wrapper>
       <ClientWrapper>
         <Industries>

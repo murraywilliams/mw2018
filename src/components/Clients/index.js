@@ -17,7 +17,7 @@ import retailIcon from '../../assets/IndustryIcons/retail.png'
 
 const Clients = () => (
   <div>
-  <Heading>Indsutries I’ve worked with</Heading>
+  <Heading>Industries I’ve worked with</Heading>
   <Intro>I've worked with a range of big companies around the world most of which are fortune 500 companies. These companies range from big corporate B2B's right down the small startups. This variety has allowed me to gain insight into many areas of business and understand problems from a macro and micro level.
   </Intro>
     <Wrapper>
@@ -97,6 +97,10 @@ const Heading = styled.h2`
 
   @media (max-width: 768px) {
     padding: 0 5%;
+  }
+
+  @media (max-width: 420px) {
+    margin-top: 40px;
   }
 `
 
@@ -185,6 +189,10 @@ const Industry = styled.div`
     color: #FFC70B;
     font-size: 14px;
     margin: 0;
+  }
+
+  @media (max-width: 420px) {
+    margin: 10px;
   }
 `
 

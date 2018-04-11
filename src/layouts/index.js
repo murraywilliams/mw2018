@@ -13,7 +13,7 @@ const TemplateWrapper = ({ children }) => (
       title="MurrayWilliams - Freelance Developer based in Cape Town"
       meta={[
         { name: 'description', content: 'Murray Williams is a freelance developer from Cape Town, South Africa' },
-        { name: "google-site-verification" },
+        { name: 'google-site-verification', content: 'tQnl4t3y-L4yTZaa1fUjIkoFCjZc_YTINpy07Odt8U0' },
         { name: 'keywords', content: 'JavaScript, Web Development, ReactJS, Continous Deployment, Freelance Developer, Freelance Designer, Developer Cape Town' },
       ]}
       link={[

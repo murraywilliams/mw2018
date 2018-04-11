@@ -172,6 +172,8 @@ const Industries = styled.div`
 
 const Industry = styled.div`
 
+  text-align: center;
+
   img {
     width: 70px;
     height: auto;

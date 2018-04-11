@@ -9,18 +9,41 @@ import ilhm from '../../assets/ClientLogos/ilhm-logo.png'
 import thompson from '../../assets/ClientLogos/thompson-logo.png'
 import tyson from '../../assets/ClientLogos/tyson-logo.png'
 
+import consultingIcon from '../../assets/IndustryIcons/consulting.png'
+import financeIcon from '../../assets/IndustryIcons/finance.png'
+import foodIcon from '../../assets/IndustryIcons/food.png'
+import healthIcon from '../../assets/IndustryIcons/health.png'
+import retailIcon from '../../assets/IndustryIcons/retail.png'
+
 const Clients = () => (
   <div>
   <Heading>Clients I’ve worked with</Heading>
+  <Intro>I’ve worked with various global fortune 500 companies based all around the world, all in exciting innovate industries.</Intro>
     <Wrapper>
       <ClientWrapper>
-        <Logos>
-          <p><a href="http://www.ehl.edu/" target="_BLANK">EHL</a></p>
-          <p><a href="https://www.accenture.com/" target="_BLANK">Accenture</a></p>
-          <p><a href="http://www.luxuryhomemarketing.com/real-estate-agents/home.html" target="_BLANK">ILHM</a></p>
-          <p><a href="https://www.thomsonreuters.com/" target="_BLANK">Thompson Reuters</a></p>
-          <p><a href="https://www.tysonfoods.com/" target="_BLANK">Tyson</a></p>
-        </Logos>
+        <Industries>
+          <Industry>
+            <img src={consultingIcon} alt=""/>
+            <h3>consulting</h3>
+          </Industry>
+          <Industry>
+            <img src={foodIcon} alt=""/>
+            <h3>food</h3>
+          </Industry>
+          <Industry>
+            <img src={healthIcon} alt=""/>
+            <h3>health</h3>
+          </Industry>
+          <Industry>
+            <img src={retailIcon} alt=""/>
+            <h3>retail</h3>
+          </Industry>
+          <Industry>
+            <img src={financeIcon} alt=""/>
+            <h3>finance</h3>
+          </Industry>
+
+        </Industries>
       </ClientWrapper>
     </Wrapper>
   </div>
@@ -31,7 +54,7 @@ export default Clients
 const Wrapper = styled.div`
   padding-left: 0;
   padding-right: 0;
-  background: #F6F6F6;
+  background: #272727;
 
   @media (max-width: 768px) {
     padding: 0 0;
@@ -76,7 +99,12 @@ const Heading = styled.h2`
   }
 `
 
-const Logos = styled.div`
+const Intro = styled.p`
+  padding-left: 10%;
+  padding-right: 10%;
+`
+
+const Industries = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
@@ -138,6 +166,22 @@ const Logos = styled.div`
     p {
       margin: 5px;
     }
+  }
+`
+
+const Industry = styled.div`
+
+  img {
+    width: 70px;
+    height: auto;
+    margin: 0 auto;
+  }
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFC70B;
+    font-size: 14px;
+    margin: 0;
   }
 `
 

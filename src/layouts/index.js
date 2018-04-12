@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import Header from '../components/Header'
 import './index.css'
 import siteImage from '../assets/mw2018-site-image.jpg'
+import favicon from '../assets/favicon-16x16.png'
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -17,6 +18,7 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'JavaScript, Web Development, ReactJS, Continous Deployment, Freelance Developer, Freelance Designer, Developer Cape Town' },
       ]}
       link={[
+        {rel: 'icon', type: 'image/png', sizes: '16x16', href: `${favicon}`},
         {rel: 'image_src', href: `${siteImage}`}
       ]}
     />

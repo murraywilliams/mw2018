@@ -55,7 +55,7 @@ export default Clients
 const Wrapper = styled.div`
   padding-left: 0;
   padding-right: 0;
-  background: #272727;
+  background: #F5F5F5;
 
   @media (max-width: 768px) {
     padding: 0 0;
@@ -186,7 +186,7 @@ const Industry = styled.div`
   h3 {
     text-align: center;
     text-transform: uppercase;
-    color: #FFC70B;
+    color: #D5D5D5;
     font-size: 14px;
     margin: 0;
   }

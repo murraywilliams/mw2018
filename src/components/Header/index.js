@@ -52,6 +52,9 @@ const Logo = styled.div`
 
   & img {
     margin-bottom: 0;
+    border: 6px solid #FFC70B;
+    border-radius: 50%;
+    padding: 20px;
   }
 `
 const CTA = styled.div`

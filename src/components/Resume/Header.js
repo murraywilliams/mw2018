@@ -19,19 +19,19 @@ const Header = () => {
         <MainContents>
           <Contact>
             <Item>
-              <p>Location</p>
-              <p>Sunningdale, Cape Town</p>
+              <span>Location</span>
+              <p>Cape Town</p>
             </Item>
             <Item>
-              <p>Phone</p>
-              <p>+27 (0)63 203 0752</p>
+              <span>Phone</span>
+              <p>063 203 0752</p>
             </Item>
             <Item>
-              <p>Web</p>
+              <span>Web</span>
               <p>www.murraywilliams.co.za</p>
             </Item>
             <Item>
-              <p>Email</p>
+              <span>Email</span>
               <p>hello@murraywilliams.co.za</p>
             </Item>
           </Contact>
@@ -46,10 +46,9 @@ export default Header;
 const Wrapper = styled.div`
   padding-left: 10%;
   padding-right: 10%;
-  background: #272727;
-  height: 100vh;
   align-content: center;
   width: 100%;
+  margin-bottom: 80px;
 `
 const Inner = styled.div`
   display: flex;
@@ -97,15 +96,25 @@ const ProfilePicture = styled.div`
   }
 `
 const MainContents = styled.div`
-  width: 85%;
+  width: 100%;
   margin-top: 25%;
+  padding-right: 5%;
 `
 const Contact = styled.div`
   display: flex;
   justify-content: flex-end;
+  border-top: 1px solid #979899;
 `
 const Item = styled.div`
   font-size: 12px;
+  color: #979899;
+  margin-right: 50px;
+  padding-top: 20px;
+
+  span {
+    font-weight: 600;
+    font-size: 14px;
+  }
 
   p {
     margin-bottom: 0;

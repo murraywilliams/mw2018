@@ -5,7 +5,8 @@ import Link from 'gatsby-link';
 const NotFoundPage = () => (
   <Wrapper>
     <Inner>
-      <h1>Even the things we love break sometimes.</h1>
+      <h1>404.</h1>
+      <h2>Even the things we love break sometimes.</h2>
       <p>You just hit a page that doesn&#39;t exist... the sadness.</p>
       <Button><Link to="/">Take me back to saftey</Link></Button>
     </Inner>
@@ -24,6 +25,13 @@ const Wrapper = styled.div`
 `
 const Inner = styled.div`
   text-align: center;
+
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 2rem
+  }
 `
 const Button = styled.div`
   padding: 15px;
